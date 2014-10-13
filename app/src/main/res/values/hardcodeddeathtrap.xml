@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="thisissowrong">
+        <item name="A">
+            Description 1
+        </item>
+        <item name="B">
+            Description 2
+        </item>
+    </string-array>
+</resources>

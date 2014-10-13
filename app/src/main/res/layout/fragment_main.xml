@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity$PlaceholderFragment">
+
+    <ImageView
+        android:src="@drawable/mainlogo"
+        android:layout_width="fill_parent"
+        android:scaleType="fitCenter"
+        android:layout_height="170dp"
+        />
+
+    <LinearLayout
+        android:paddingTop="20dp"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:layout_margin="10dp"
+            android:text="@string/startBtn"
+            android:id="@+id/fragment_main_startBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffff2e56" />
+
+        <Button
+            android:layout_margin="10dp"
+            android:text="@string/infoBtn"
+            android:id="@+id/fragment_main_infoBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_margin="10dp"
+            android:text="@string/historyBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

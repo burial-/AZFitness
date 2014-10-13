@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/fragent_routine_letter"
+        android:text="@string/a_letter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/fragent_routine_title"
+        android:text="@string/a_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/fragent_routine_imageview"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop" />
+
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/fragment_routine_slider"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/fragent_routine_description"
+        android:text="@string/a_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

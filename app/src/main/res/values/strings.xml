@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">A-Z Fitness</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title">ABC</string>
+    <string name="startBtn">Start</string>
+    <string name="infoBtn">Info</string>
+    <string name="historyBtn">History</string>
+    <string name="title_activity_routine">RoutineActivity</string>
+    <string name="a_letter">A</string>
+    <string name="a_title">Air Squat</string>
+    <string name="a_desc">Standing with feet should width apart with toes pointing slighty outwards, perform a squat using your arms to counter balance. Push hips backwards, remember to engage your core.</string>
+    <string name="b_letter">B</string>
+    <string name="b_title">Burpees</string>
+    <string name="b_desc">Start by jumping and reaching for the ceiling, when you touch down, jump your feet backwards into a plank position. From here jump your feet back to your hands and perform the jump again.</string>
+    <string name="c_letter">C</string>
+    <string name="c_title">Crunches</string>
+    <string name="c_desc">Lying in a prone position with your knees bent to almost 90 degrees, either place your hands straight towards the ceiling or behind your head. From here flex your abdominal muscles and bring your elbows as close to your knees as possible.</string>
+    <string name="d_letter">D</string>
+    <string name="d_title">Dips</string>
+    <string name="d_desc">Performed on a chair or platform, place your palms on the edge of the surface with your thumbs pointed forward With bent knees, flex your arms, gliding your back as close to the chair as possible until your arms are bent to 90 degrees. Extend your arms and return to the original position.</string>
+    <string name="e_letter">E</string>
+    <string name="e_title">Eccentric Squats</string>
+    <string name="e_desc">Standing in a squat position, lower yourself towards the ground slowly, taking 4–6 seconds to get to 90 degree knee bend, then rise normally.</string>
+    <string name="title_activity_routines">Routines</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="hello_blank_fragment">This is the results screen, either get the time and save it with the button or alternatively have the time displayed and press the button to stop it and save it to shared prefs, it\'s all up to you guys.</string>
+    <string name="title_activity_info">InfoActivity</string>
+
+    <!--Information section-->
+    <string name="info_title">Information about this app</string>
+    <string name="info_desc">Welcome to the ABC challenge This is a full body workout designed to improve your strength, muscular endurance and anaerobic capacity. It is composed of an array of movements of different difficulties that will push your current level of fitness through the stratosphere.
+        \n \n
+        The aim of the challenge is to get through as many of the exercises as possible. This may not be difficult for some of you; in this case there is a rep challenge in which you either complete 10 or 5 reps of each exercise. You also have the option to time yourself so you know if your fitness has increased as your time should decrease, providing you practice the movements enough.
+        \n \n
+        Most of the exercises have options which either increase or decrease the difficulty of the exercises so you may be challenged optimally. Make sure you set a plan in your head of the exercises you will be attempting to prevent early fatigue or under stimulation.
+        \n \n
+        Record your name and the letter in which you made it to, or the amount of reps completed of each letter in the space provided, there is an optional time column to complete if you wish to race against the clock.
+        \n \n
+        Each single sided exercise must be performed on each side to count as one rep. These exercises are Russian twist, Lunge and Mountain Climbers.
+        \n \n
+        Remember, if you are someone who shies away from a challenge because you don\'t like comparing yourself to others, it\'s an individual pursuit and the most important person you should be competing against is yourself. So give it a go, surprise yourself and take something away from this challenge.
+        \n \n
+        Special thanks to all our awesome models for their great demonstrations!
+        \n \n
+        If you have any questions about the challenge don\'t hesitate to ask our friendly Club Aqua staff as they will be more than happy to assist you.
+        \n \n
+        <b>Good Luck!</b>
+    </string>
+    <string name="routine_label">A-Z Fitness</string>
+    <string name="main_label">Home</string>
+    <string name="info_label">Information</string>
+</resources>
