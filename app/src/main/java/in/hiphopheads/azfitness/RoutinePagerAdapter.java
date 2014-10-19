@@ -21,8 +21,7 @@ public class RoutinePagerAdapter extends FragmentPagerAdapter {
         // If the position isn't in the array then we have finished and need to display the end screen
         if(position >= fitnessListLength)
         {
-            // TODO: either pass a time or have the fragment get it from shared prefs
-            return RoutineEndFragment.newInstance("The best");
+            return RoutineEndFragment.newInstance();
         }
 
         // getItem is called to instantiate the fragment for the given page.

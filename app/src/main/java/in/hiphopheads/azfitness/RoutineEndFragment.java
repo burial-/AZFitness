@@ -1,32 +1,36 @@
 package in.hiphopheads.azfitness;
 
 import android.app.Fragment;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 
 public class RoutineEndFragment extends Fragment {
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM_TIME = "my_time";
 
-    private String mTime;
+    // Start time we get from shared prefs
+    private Date mStartTime;
+
+    // Views we need to change/use
+    public TextView mResultText;
+    public Button mShowResults;
 
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param myTime Parameter 1.
      * @return A new instance of fragment EndRoutineFragment.
      */
-    public static RoutineEndFragment newInstance(String myTime) {
-        RoutineEndFragment fragment = new RoutineEndFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM_TIME, myTime);
-        fragment.setArguments(args);
-        return fragment;
+    public static RoutineEndFragment newInstance() {
+        return new RoutineEndFragment();
     }
     public RoutineEndFragment() {
         // Required empty public constructor
@@ -35,16 +39,37 @@ public class RoutineEndFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mTime = getArguments().getString(ARG_PARAM_TIME);
-        }
+        Context context = getActivity();
+        SharedPreferences sharedPref = context.getSharedPreferences(
+                in.hiphopheads.azfitness.MainFragment.PREF_PARAM_TIME_KEY, Context.MODE_PRIVATE);
+        mStartTime = new Date(sharedPref.getLong(in.hiphopheads.azfitness.MainFragment.PREF_PARAM_TIME, 0));
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_routine_end, container, false);
+                //frag_routine_end_start_time
+        View rootView =  inflater.inflate(R.layout.fragment_routine_end, container, false);
+        mResultText = (TextView) rootView.findViewById(R.id.frag_routine_end_result);
+
+        mShowResults = (Button) rootView.findViewById(R.id.frag_routine_end_show_results);
+        mShowResults.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                displayResults(new Date().getTime());
+            }
+        });
+
+        return  rootView;
     }
 
+    public void displayResults(long EndTime)
+    {
+        long difference = EndTime - mStartTime.getTime();
+        long diffInSec = TimeUnit.MILLISECONDS.toSeconds(difference);
+        long diffInMin = TimeUnit.MILLISECONDS.toMinutes(difference);
+        long diffInHour = TimeUnit.MILLISECONDS.toHours(difference);
+        mResultText.setText(diffInHour + " Hours, " + diffInMin +" Minutes, " + diffInSec + " Seconds");
+    }
 }

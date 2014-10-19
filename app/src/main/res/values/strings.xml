@@ -2,13 +2,15 @@
 <resources>
 
     <string name="app_name">A-Z Fitness</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title">ABC</string>
+
+    <!--Main activity fragments contents-->
     <string name="startBtn">Start</string>
     <string name="infoBtn">Info</string>
     <string name="historyBtn">History</string>
-    <string name="title_activity_routine">RoutineActivity</string>
+
+    <!--The hard coded array...-->
     <string name="a_letter">A</string>
     <string name="a_title">Air Squat</string>
     <string name="a_desc">Standing with feet should width apart with toes pointing slighty outwards, perform a squat using your arms to counter balance. Push hips backwards, remember to engage your core.</string>
@@ -24,12 +26,10 @@
     <string name="e_letter">E</string>
     <string name="e_title">Eccentric Squats</string>
     <string name="e_desc">Standing in a squat position, lower yourself towards the ground slowly, taking 4–6 seconds to get to 90 degree knee bend, then rise normally.</string>
+    <!--End of the hard coded array-->
+
     <string name="title_activity_routines">Routines</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
-    <string name="hello_blank_fragment">This is the results screen, either get the time and save it with the button or alternatively have the time displayed and press the button to stop it and save it to shared prefs, it\'s all up to you guys.</string>
-    <string name="title_activity_info">InfoActivity</string>
+    <string name="results_message">This is the results screen, either get the time and save it with the button or alternatively have the time displayed and press the button to stop it and save it to shared prefs, it\'s all up to you guys.</string>
 
     <!--Information section-->
     <string name="info_title">Information about this app</string>
@@ -51,6 +51,8 @@
         \n \n
         <b>Good Luck!</b>
     </string>
+
+    <!--Lables for each activity-->
     <string name="routine_label">A-Z Fitness</string>
     <string name="main_label">Home</string>
     <string name="info_label">Information</string>
