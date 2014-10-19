@@ -21,12 +21,6 @@
         android:gravity="center_horizontal"
         android:textSize="16sp" />
 
-    <ImageView
-        android:id="@+id/fragent_routine_imageview"
-        android:layout_width="fill_parent"
-        android:layout_height="300dp"
-        android:scaleType="centerCrop" />
-
     <com.daimajia.slider.library.SliderLayout
         android:id="@+id/fragment_routine_slider"
         android:layout_width="fill_parent"

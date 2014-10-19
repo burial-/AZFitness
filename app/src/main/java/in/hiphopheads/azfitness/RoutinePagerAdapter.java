@@ -7,7 +7,7 @@ import android.support.v13.app.FragmentPagerAdapter;
 /**
  * Created on 13/10/14.
  */
-public class RoutinePagerAdapter extends FragmentPagerAdapter {
+class RoutinePagerAdapter extends FragmentPagerAdapter {
 
     private int fitnessListLength;
 

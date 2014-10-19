@@ -24,7 +24,7 @@
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show me the results!"
+        android:text="@string/results_button"
         android:id="@+id/frag_routine_end_show_results"
         android:layout_gravity="center_horizontal|top" />
 

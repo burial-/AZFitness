@@ -46,18 +46,13 @@ public class MainFragment extends Fragment {
         return rootView;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    public void saveStartTime()
+    void saveStartTime()
     {
         Context context = getActivity();
         SharedPreferences sharedPref = context.getSharedPreferences(
                 PREF_PARAM_TIME_KEY, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putLong(PREF_PARAM_TIME, new Date().getTime());
-        editor.commit();
+        editor.apply();
     }
 }

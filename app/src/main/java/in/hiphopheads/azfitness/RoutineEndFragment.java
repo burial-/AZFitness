@@ -20,8 +20,7 @@ public class RoutineEndFragment extends Fragment {
     private Date mStartTime;
 
     // Views we need to change/use
-    public TextView mResultText;
-    public Button mShowResults;
+    private TextView mResultText;
 
     /**
      * Use this factory method to create a new instance of
@@ -53,7 +52,7 @@ public class RoutineEndFragment extends Fragment {
         View rootView =  inflater.inflate(R.layout.fragment_routine_end, container, false);
         mResultText = (TextView) rootView.findViewById(R.id.frag_routine_end_result);
 
-        mShowResults = (Button) rootView.findViewById(R.id.frag_routine_end_show_results);
+        Button mShowResults = (Button) rootView.findViewById(R.id.frag_routine_end_show_results);
         mShowResults.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,7 +63,7 @@ public class RoutineEndFragment extends Fragment {
         return  rootView;
     }
 
-    public void displayResults(long EndTime)
+    void displayResults(long EndTime)
     {
         long difference = EndTime - mStartTime.getTime();
         long diffInSec = TimeUnit.MILLISECONDS.toSeconds(difference);

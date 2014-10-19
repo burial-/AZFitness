@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.daimajia.slider.library.SliderLayout;
@@ -21,7 +20,7 @@ import in.hiphopheads.azfitness.Models.Routine;
 public class RoutineFragment extends Fragment {
 
     // Our routines
-    List<Routine> routines;
+    private List<Routine> routines;
 
     /**
      * The fragment argument representing the section number for this
@@ -30,11 +29,10 @@ public class RoutineFragment extends Fragment {
     private static final String ARG_SECTION_NUMBER = "section_number";
 
     //This are the parts of the layout we will need to change for each item
-    TextView letterTextView;
-    TextView titleTextView;
-    TextView descriptionTextView;
-    ImageView exampleImageView;
-    SliderLayout sliderShow;
+    private TextView letterTextView;
+    private TextView titleTextView;
+    private TextView descriptionTextView;
+    private SliderLayout sliderShow;
 
     /**
      * Returns a new instance of this fragment for the given section
@@ -59,7 +57,6 @@ public class RoutineFragment extends Fragment {
         titleTextView = (TextView) rootView.findViewById(R.id.fragent_routine_title);
         descriptionTextView = (TextView) rootView.findViewById(R.id.fragent_routine_description);
         sliderShow = (SliderLayout) rootView.findViewById(R.id.fragment_routine_slider);
-        exampleImageView = (ImageView) rootView.findViewById(R.id.fragent_routine_imageview);
 
         // We now initialize the view with our routine
         initializeView();
@@ -74,7 +71,7 @@ public class RoutineFragment extends Fragment {
         routines = new HardcodedRoutines(getActivity()).getRoutines();
     }
 
-    public void initializeView() {
+    void initializeView() {
         // We convert the list to an array so we can use the position int
         // to select a certain routine
         Routine[] mRoutines = routines.toArray(new Routine[routines.size()]);
@@ -93,22 +90,15 @@ public class RoutineFragment extends Fragment {
         // We cycle through the int array adding the images to the slider,
         // an option we must consider is if a Routine only has one image then using a normal
         // ImageView would be more appropriate.
-        if(mRoutineImages.length > 0) {
-            for (int i = 0; i < mRoutineImages.length; i++) {
-                // Since we will be using the slider we don't need the standard ImageView
-                exampleImageView.setVisibility(View.GONE);
-                // Create a new DefaultSliderView and set the image
-                DefaultSliderView defaultSliderView = new DefaultSliderView(getActivity());
-                defaultSliderView.image(mRoutineImages[i]);
-                // Add the slider view to the slider
-                sliderShow.addSlider(defaultSliderView);
-            }
-        } else {
-            // Alternatively we don't use the slider and just use the image view as there is only
-            // one image and we don't need to load a slider for that.
-            sliderShow.setVisibility(View.GONE);
-            exampleImageView.setImageResource(mRoutineImages[0]);
+        for (int mRoutineImage : mRoutineImages) {
+            // Since we will be using the slider we don't need the standard ImageView
+            // Create a new DefaultSliderView and set the image
+            DefaultSliderView defaultSliderView = new DefaultSliderView(getActivity());
+            defaultSliderView.image(mRoutineImage);
+            // Add the slider view to the slider
+            sliderShow.addSlider(defaultSliderView);
         }
+
         // This stops the slider from changing image automatically after a few seconds.
         sliderShow.stopAutoCycle();
     }

@@ -14,20 +14,15 @@ import in.hiphopheads.azfitness.Models.Routine;
  * This is not good programming, this is not good at all
  * Created on 13/10/14.
  */
-public class HardcodedRoutines {
+class HardcodedRoutines {
     // This list of routines we will use
-    public List<Routine> routines = new ArrayList<Routine>();
-    // Context is required to get the string values from our string resource
-    public Context mContext;
+    private List<Routine> routines = new ArrayList<Routine>();
 
     public HardcodedRoutines(Context mContext) {
-        // Set the context
-        this.mContext = mContext;
-
         // Each of these creates a new routine,
         // it also creates an array of image ids which we add to the routine,
         // we then add the routine to the routines list
-        int[] routineImages = {R.drawable.a1, R.drawable.b1};
+        int[] routineImages = {R.drawable.a1, R.drawable.b2};
         Routine routine = new Routine(
                 mContext.getString(R.string.a_title),
                 mContext.getString(R.string.a_desc),

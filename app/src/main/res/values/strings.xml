@@ -3,7 +3,6 @@
 
     <string name="app_name">A-Z Fitness</string>
     <string name="action_settings">Settings</string>
-    <string name="title">ABC</string>
 
     <!--Main activity fragments contents-->
     <string name="startBtn">Start</string>
@@ -28,7 +27,6 @@
     <string name="e_desc">Standing in a squat position, lower yourself towards the ground slowly, taking 4–6 seconds to get to 90 degree knee bend, then rise normally.</string>
     <!--End of the hard coded array-->
 
-    <string name="title_activity_routines">Routines</string>
     <string name="results_message">This is the results screen, either get the time and save it with the button or alternatively have the time displayed and press the button to stop it and save it to shared prefs, it\'s all up to you guys.</string>
 
     <!--Information section-->
@@ -56,4 +54,6 @@
     <string name="routine_label">A-Z Fitness</string>
     <string name="main_label">Home</string>
     <string name="info_label">Information</string>
+    <string name="results_button">Show me the results!</string>
+    <string name="abc_logo_description">ABC Challenge Logo</string>
 </resources>

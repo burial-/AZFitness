@@ -10,6 +10,7 @@
     tools:context=".MainActivity$PlaceholderFragment">
 
     <ImageView
+        android:contentDescription="@string/abc_logo_description"
         android:src="@drawable/mainlogo"
         android:layout_width="fill_parent"
         android:scaleType="fitCenter"
