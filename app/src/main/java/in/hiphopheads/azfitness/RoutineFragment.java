@@ -86,19 +86,16 @@ public class RoutineFragment extends Fragment {
         // We get the routine images
         int[] mRoutineImages = mRoutines[position].getRoutineImages();
 
-        //TODO: decide if we should change to one or not, (usability)
         // We cycle through the int array adding the images to the slider,
         // an option we must consider is if a Routine only has one image then using a normal
         // ImageView would be more appropriate.
         for (int mRoutineImage : mRoutineImages) {
-            // Since we will be using the slider we don't need the standard ImageView
             // Create a new DefaultSliderView and set the image
             DefaultSliderView defaultSliderView = new DefaultSliderView(getActivity());
             defaultSliderView.image(mRoutineImage);
             // Add the slider view to the slider
             sliderShow.addSlider(defaultSliderView);
         }
-
         // This stops the slider from changing image automatically after a few seconds.
         sliderShow.stopAutoCycle();
     }

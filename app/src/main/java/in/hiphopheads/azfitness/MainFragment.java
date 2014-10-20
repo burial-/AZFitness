@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.Date;
 
@@ -30,6 +31,7 @@ public class MainFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         Button startBtn = (Button) rootView.findViewById(R.id.fragment_main_startBtn);
         Button infoBtn = (Button) rootView.findViewById(R.id.fragment_main_infoBtn);
+        Button histBtn = (Button) rootView.findViewById(R.id.fragment_main_histBtn);
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,6 +43,12 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), InfoActivity.class));
+            }
+        });
+        histBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), "We need to create a history function", Toast.LENGTH_SHORT).show();
             }
         });
         return rootView;
