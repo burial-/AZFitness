@@ -12,6 +12,8 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+        <!--SugarORM database config-->
         <meta-data
             android:name="DATABASE"
             android:value="routine.db" />
@@ -20,7 +22,7 @@
             android:value="1" />
         <meta-data
             android:name="QUERY_LOG"
-            android:value="true" />
+            android:value="false" />
         <meta-data
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="in.hiphopheads.azfitness" />

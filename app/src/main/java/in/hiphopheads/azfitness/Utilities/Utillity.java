@@ -26,7 +26,7 @@ public class Utillity {
 
     // Because someone overlooked the idea that you would want a day of month suffix in the
     // SimpleDateFormat utility we have this here.
-    public String getDayOfMonthSuffix(final int n) {
+    String getDayOfMonthSuffix(final int n) {
         if (n >= 11 && n <= 13) {
             return "th";
         }

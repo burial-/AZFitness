@@ -63,6 +63,7 @@ public class HistoryListAdapter extends ArrayAdapter<UserRecord> {
         minuteView.setText(diffInMin+"");
         secondView.setText(diffInSec+"");
 
+        // Return the updated view
         return convertView;
     }
 }

@@ -29,7 +29,7 @@ public class MainFragment extends Fragment {
     public static final String PREF_PARAM_KEY = "pref_rep_key";
     public static final String PREF_PARAM_REPS = "reps";
     public static final String PREF_PARAM_LAST_ROUTINE = "last_routine";
-    public static final int REP_AMOUNT = 10;
+    private static final int REP_AMOUNT = 10;
 
     public MainFragment() {
     }
@@ -77,6 +77,8 @@ public class MainFragment extends Fragment {
         SharedPreferences sharedPref = context.getSharedPreferences(
                 PREF_PARAM_KEY, Context.MODE_PRIVATE);
         String arg = String.valueOf(sharedPref.getLong(MainFragment.PREF_PARAM_LAST_ROUTINE, 0));
+
+        // Check if there is a previous routine that the user didn't stop
         try {
             UserRecord userRecord = UserRecord.find(UserRecord.class, "ROUTINE_TIME_ID = " + arg).get(0);
             userRecord.timeCompleted = new Date();

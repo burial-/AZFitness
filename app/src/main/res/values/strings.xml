@@ -125,5 +125,12 @@
     <!-- Health Warning -->
     <string name="health_warning">If you have an existing health condition, please consult your doctor before attempting this fitness routine.</string>
     <string name="title_activity_previous_routine">Routine Times</string>
+    <string name="formating_string1"> - </string>
+    <string name="formating_string2"> Mins, </string>
+    <string name="formating_string3"> Secs</string>
+    <string name="formating_string5"> - Time : </string>
+    <string name="formating_string6">hrs, </string>
+    <string name="formating_string7">mins, </string>
+    <string name="formating_string8">secs</string>
 
 </resources>

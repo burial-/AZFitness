@@ -12,7 +12,7 @@
         android:textStyle="bold"
         android:textSize="20sp" />
     <TextView
-        android:text=" - "
+        android:text="@string/formating_string1"
         android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -23,7 +23,7 @@
         android:textStyle="bold"
         android:textSize="20sp" />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"/>
     <TextView
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
-        android:text=" Mins, "
+        android:text="@string/formating_string2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp" />
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <TextView
-        android:text=" Secs"
+        android:text="@string/formating_string3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp" />

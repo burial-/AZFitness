@@ -17,7 +17,7 @@ import in.hiphopheads.azfitness.R;
  */
 public class HardcodedRoutines {
     // This list of routines we will use
-    private List<Routine> routines = new ArrayList<Routine>();
+    private final List<Routine> routines = new ArrayList<Routine>();
 
     public HardcodedRoutines(Context mContext) {
         // Each of these creates a new routine,

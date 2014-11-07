@@ -2,8 +2,6 @@ package in.hiphopheads.azfitness;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -28,15 +26,22 @@ public class PreviousRoutineActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_previous_routine);
 
+        // We need the routine id
         getRoutineTimeId();
 
+        // Initialize the list and array
         ListView mRoutineResults = (ListView) findViewById(R.id.previous_routine_listview);
         ArrayList<RoutineResultList> mListRoutines = new ArrayList<RoutineResultList>();
-        for (RoutineTime routineTime : RoutineTime.find(RoutineTime.class, "ROUTINE_TIME_ID = " + routineTimeId))
-        {
+
+        // Iterate through the routines for this user record
+        for (RoutineTime routineTime : RoutineTime.find(RoutineTime.class, "ROUTINE_TIME_ID = " + routineTimeId)) {
+
+            // Calculate the times
             long diff = routineTime.timeCompleted - routineTime.timeStarted;
-            long Sec = TimeUnit.MILLISECONDS.toSeconds(diff)%60;
+            long Sec = TimeUnit.MILLISECONDS.toSeconds(diff) % 60;
             long Min = TimeUnit.MILLISECONDS.toMinutes(diff);
+
+            // Add routines to the routine list to be displayed
             mListRoutines.add(new RoutineResultList(
                     routineTime.RoutineLetter,
                     routineTime.RoutineTitle,
@@ -46,36 +51,19 @@ public class PreviousRoutineActivity extends Activity {
             ));
         }
 
+        // Create a new array adapter and pass the routines to it
         ArrayAdapter arrayAdapter = new ResultsListAdapter(this, mListRoutines);
+
+        // Attach the adapter to the list view
         mRoutineResults.setAdapter(arrayAdapter);
     }
 
-    public void getRoutineTimeId()
-    {
+    // Get the routine id from the intent
+    void getRoutineTimeId() {
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             routineTimeId = extras.getString(ROUTINE_TIME_KEY);
         }
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.previous_routine, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
 }

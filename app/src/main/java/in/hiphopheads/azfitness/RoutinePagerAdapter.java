@@ -13,7 +13,7 @@ import in.hiphopheads.azfitness.Fragments.RoutineFragment;
 class RoutinePagerAdapter extends FragmentPagerAdapter {
 
     // The length of the routine array size
-    private int fitnessListSize;
+    private final int fitnessListSize;
 
     public RoutinePagerAdapter(FragmentManager fm, int fitnessListSize) {
         super(fm);
