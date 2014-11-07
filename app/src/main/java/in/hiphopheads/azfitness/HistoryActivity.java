@@ -1,17 +1,17 @@
 package in.hiphopheads.azfitness;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import java.text.ParseException;
 import java.util.List;
 
+import in.hiphopheads.azfitness.ListAdapters.HistoryListAdapter;
 import in.hiphopheads.azfitness.Models.UserRecord;
 
 
@@ -31,14 +31,17 @@ public class HistoryActivity extends Activity {
         mHistList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String date;
-                try {
-                    date = new Utillity().formatDate(userRecords.get(i).timeStarted);
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                    date = "lol no parsing";
-                }
-                Toast.makeText(getApplication(), date, Toast.LENGTH_SHORT).show();
+//                String date;
+//                try {
+                    //date = new Utillity().formatDate(userRecords.get(i).timeStarted);
+                    Intent intent = new Intent(getApplicationContext(), PreviousRoutineActivity.class);
+                    intent.putExtra(PreviousRoutineActivity.ROUTINE_TIME_KEY,String.valueOf(userRecords.get(i).RoutineTimeId));
+                    startActivity(intent);
+//                } catch (ParseException e) {
+//                    e.printStackTrace();
+//                    //date = "lol no parsing";
+//                }
+                //Toast.makeText(getApplication(), date, Toast.LENGTH_SHORT).show();
             }
         });
     }

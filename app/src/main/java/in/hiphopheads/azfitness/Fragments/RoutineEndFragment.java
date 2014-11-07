@@ -1,4 +1,4 @@
-package in.hiphopheads.azfitness;
+package in.hiphopheads.azfitness.Fragments;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -18,9 +18,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import in.hiphopheads.azfitness.ListAdapters.ResultsListAdapter;
 import in.hiphopheads.azfitness.Models.RoutineResultList;
 import in.hiphopheads.azfitness.Models.RoutineTime;
 import in.hiphopheads.azfitness.Models.UserRecord;
+import in.hiphopheads.azfitness.R;
 
 
 public class RoutineEndFragment extends Fragment {
@@ -54,7 +56,6 @@ public class RoutineEndFragment extends Fragment {
         Context context = getActivity();
         SharedPreferences sharedPref = context.getSharedPreferences(
                 MainFragment.PREF_PARAM_KEY, Context.MODE_PRIVATE);
-        //mStartTime = new Date(sharedPref.getLong(in.hiphopheads.azfitness.MainFragment.PREF_PARAM_TIME, 0));
         String arg = String.valueOf(sharedPref.getLong(MainFragment.PREF_PARAM_LAST_ROUTINE, 0));
         RoutineId = arg;
         mUserRecord = UserRecord.find(UserRecord.class, "ROUTINE_TIME_ID = " + arg).get(0);
@@ -66,7 +67,6 @@ public class RoutineEndFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-                //frag_routine_end_start_time
         View rootView =  inflater.inflate(R.layout.fragment_routine_end, container, false);
         mResultText = (TextView) rootView.findViewById(R.id.frag_routine_end_result);
 
@@ -76,8 +76,6 @@ public class RoutineEndFragment extends Fragment {
         mShowResults.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mUserRecord.timeCompleted = new Date();
-                mUserRecord.save();
                 displayResults();
             }
         });
@@ -87,6 +85,9 @@ public class RoutineEndFragment extends Fragment {
 
     void displayResults()
     {
+        mUserRecord.timeCompleted = new Date();
+        mUserRecord.save();
+
         long difference = mUserRecord.timeCompleted.getTime() - mUserRecord.timeStarted.getTime();
         long diffInSec = TimeUnit.MILLISECONDS.toSeconds(difference)%60;
         long diffInMin = TimeUnit.MILLISECONDS.toMinutes(difference);

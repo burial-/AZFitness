@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="in.hiphopheads.azfitness.RoutineEndFragment">
+    tools:context="in.hiphopheads.azfitness.Fragments.RoutineEndFragment">
 
     <TextView
         android:layout_width="fill_parent"

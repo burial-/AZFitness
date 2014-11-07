@@ -124,5 +124,6 @@
 
     <!-- Health Warning -->
     <string name="health_warning">If you have an existing health condition, please consult your doctor before attempting this fitness routine.</string>
+    <string name="title_activity_previous_routine">Routine Times</string>
 
 </resources>

@@ -1,4 +1,4 @@
-package in.hiphopheads.azfitness;
+package in.hiphopheads.azfitness.Utilities;
 
 import java.text.ParseException;
 import java.util.Calendar;

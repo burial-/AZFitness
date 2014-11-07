@@ -1,4 +1,4 @@
-package in.hiphopheads.azfitness;
+package in.hiphopheads.azfitness.Fragments;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -14,7 +14,11 @@ import com.orm.SugarContext;
 
 import java.util.Date;
 
+import in.hiphopheads.azfitness.HistoryActivity;
+import in.hiphopheads.azfitness.InfoActivity;
 import in.hiphopheads.azfitness.Models.UserRecord;
+import in.hiphopheads.azfitness.R;
+import in.hiphopheads.azfitness.RoutineActivity;
 
 /**
  * Basic fragment that sets onclick listeners for the buttons

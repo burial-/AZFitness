@@ -1,4 +1,4 @@
-package in.hiphopheads.azfitness;
+package in.hiphopheads.azfitness.ListAdapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import in.hiphopheads.azfitness.Models.RoutineResultList;
+import in.hiphopheads.azfitness.R;
 
 /**
  * Created on 7/11/14.

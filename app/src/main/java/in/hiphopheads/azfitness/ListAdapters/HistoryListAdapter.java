@@ -1,4 +1,4 @@
-package in.hiphopheads.azfitness;
+package in.hiphopheads.azfitness.ListAdapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,6 +12,8 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import in.hiphopheads.azfitness.Models.UserRecord;
+import in.hiphopheads.azfitness.R;
+import in.hiphopheads.azfitness.Utilities.Utillity;
 
 /**
  * Created on 7/11/14.

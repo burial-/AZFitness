@@ -1,4 +1,4 @@
-package in.hiphopheads.azfitness;
+package in.hiphopheads.azfitness.Fragments;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -19,8 +19,10 @@ import com.orm.SugarContext;
 import java.util.Date;
 import java.util.List;
 
+import in.hiphopheads.azfitness.Utilities.HardcodedRoutines;
 import in.hiphopheads.azfitness.Models.Routine;
 import in.hiphopheads.azfitness.Models.RoutineTime;
+import in.hiphopheads.azfitness.R;
 
 /**
  * Created on 13/10/14.

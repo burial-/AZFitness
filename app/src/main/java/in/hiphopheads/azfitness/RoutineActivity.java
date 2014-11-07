@@ -7,6 +7,8 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import in.hiphopheads.azfitness.Utilities.HardcodedRoutines;
+
 
 public class RoutineActivity extends Activity {
 

@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import in.hiphopheads.azfitness.Fragments.MainFragment;
+
 
 public class MainActivity extends Activity {
 

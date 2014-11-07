@@ -1,4 +1,4 @@
-package in.hiphopheads.azfitness;
+package in.hiphopheads.azfitness.Utilities;
 
 import android.content.Context;
 
@@ -8,13 +8,14 @@ import java.util.Comparator;
 import java.util.List;
 
 import in.hiphopheads.azfitness.Models.Routine;
+import in.hiphopheads.azfitness.R;
 
 /**
  * TODO: Use a database, maybe get the data through JSON online or something
  * This is not good programming, this is not good at all
  * Created on 13/10/14.
  */
-class HardcodedRoutines {
+public class HardcodedRoutines {
     // This list of routines we will use
     private List<Routine> routines = new ArrayList<Routine>();
 

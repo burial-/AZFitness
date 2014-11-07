@@ -52,6 +52,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="in.hiphopheads.azfitness.MainActivity" />
         </activity>
+        <activity
+            android:name=".PreviousRoutineActivity"
+            android:label="@string/title_activity_previous_routine"
+            android:parentActivityName=".HistoryActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.hiphopheads.azfitness.HistoryActivity" />
+        </activity>
     </application>
 
 </manifest>
