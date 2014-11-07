@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 import com.orm.SugarContext;
 
@@ -82,8 +83,6 @@ public class RoutineFragment extends Fragment {
         super.onCreate(savedInstanceState);
         // We get all the routines and store them in out list
         routines = new HardcodedRoutines(getActivity()).getRoutines();
-
-        // TODO: COmment this heh
         SugarContext.init(getActivity());
     }
 
@@ -110,6 +109,7 @@ public class RoutineFragment extends Fragment {
             // Create a new DefaultSliderView and set the image
             DefaultSliderView defaultSliderView = new DefaultSliderView(getActivity());
             defaultSliderView.image(mRoutineImage);
+            defaultSliderView.setScaleType(BaseSliderView.ScaleType.FitCenterCrop);
             // Add the slider view to the slider
             sliderShow.addSlider(defaultSliderView);
         }
