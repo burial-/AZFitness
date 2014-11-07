@@ -9,17 +9,18 @@ import android.support.v13.app.FragmentPagerAdapter;
  */
 class RoutinePagerAdapter extends FragmentPagerAdapter {
 
-    private int fitnessListLength;
+    // The length of the routine array size
+    private int fitnessListSize;
 
-    public RoutinePagerAdapter(FragmentManager fm, int fitnessListLength) {
+    public RoutinePagerAdapter(FragmentManager fm, int fitnessListSize) {
         super(fm);
-        this.fitnessListLength = fitnessListLength;
+        this.fitnessListSize = fitnessListSize;
     }
 
     @Override
     public Fragment getItem(int position) {
         // If the position isn't in the array then we have finished and need to display the end screen
-        if(position >= fitnessListLength)
+        if(position >= fitnessListSize)
         {
             return RoutineEndFragment.newInstance();
         }
@@ -33,6 +34,6 @@ class RoutinePagerAdapter extends FragmentPagerAdapter {
     // to a database call if we use one.
     @Override
     public int getCount() {
-        return fitnessListLength + 1;
+        return fitnessListSize + 1;
     }
 }

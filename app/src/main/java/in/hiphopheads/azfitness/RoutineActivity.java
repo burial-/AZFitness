@@ -32,13 +32,13 @@ public class RoutineActivity extends Activity {
 
 
         // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity. We also pass the size of the fitness array,
+        // primary sections of the activity. We also pass the the fitness array,
         // this would latter be changed to a database call
         // or an api call depending on where data is stored.
         mRoutinePagerAdapter = new RoutinePagerAdapter(
                 getFragmentManager(),
-                new HardcodedRoutines(this).getRoutineListLength());
-
+                new HardcodedRoutines(this).getRoutineListLength()
+        );
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mRoutinePagerAdapter);

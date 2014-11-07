@@ -28,4 +28,10 @@
         android:id="@+id/frag_routine_end_show_results"
         android:layout_gravity="center_horizontal|top" />
 
+    <ListView
+        android:id="@+id/frag_routine_end_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawSelectorOnTop="true" />
+
 </LinearLayout>

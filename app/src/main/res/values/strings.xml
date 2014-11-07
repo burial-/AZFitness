@@ -4,12 +4,12 @@
     <string name="app_name">A-Z Fitness</string>
     <string name="action_settings">Settings</string>
 
-    <!--Main activity fragments contents-->
+    <!-- Main activity fragments contents -->
     <string name="startBtn">Start</string>
     <string name="infoBtn">Info</string>
     <string name="historyBtn">History</string>
 
-    <!--The hard coded array...-->
+    <!-- The hard coded array... -->
     <string name="a_letter">A</string>
     <string name="a_title">Air Squat</string>
     <string name="a_desc">Standing with feet should width apart with toes pointing slighty outwards, perform a squat using your arms to counter balance. Push hips backwards, remember to engage your core.</string>
@@ -25,11 +25,75 @@
     <string name="e_letter">E</string>
     <string name="e_title">Eccentric Squats</string>
     <string name="e_desc">Standing in a squat position, lower yourself towards the ground slowly, taking 4–6 seconds to get to 90 degree knee bend, then rise normally.</string>
-    <!--End of the hard coded array-->
+    <!-- Routines to add -->
+    <string name="f_letter">F</string>
+    <string name="f_title">Frog Jumps (lateral)</string>
+    <string name="f_desc">Standing with feet wider than shoulder width, toes pointing on a 45 degree angle, squat down until you have a 90 degree bend in your knees. Jump laterally and squat again.</string>
+    <string name="g_letter">G</string>
+    <string name="g_title">Grizzly bear walk</string>
+    <string name="g_desc">Lying prone in plank position, walk alternate hands and legs in a press up motion moving forward. Aim to make contact with elbow and knee, keeping yourself as low to the ground as possible.</string>
+    <string name="h_letter">H</string>
+    <string name="h_title">Hanging knee raises</string>
+    <string name="h_desc">Either free hand or assisted, flex at the hip and bring your core constantly, particularly when lowering. Increase difficulty by extending legs.</string>
+    <string name="i_letter">I</string>
+    <string name="i_title">Incline Press-ups</string>
+    <string name="i_desc">With your hands on a bench, perform press-ups lowering yourself towards the bench until there is a 90 degree bend in your elbow. Decrease the difficulty by performing the press-ups with your knees on the ground.</string>
+    <string name="j_letter">J</string>
+    <string name="j_title">Jump Lunges</string>
+    <string name="j_desc">Standing in a lunge position, with a 90 degree bend in your front leg, and rear knee nearly touching the ground, power off by jumping and swapping foot placement. Try to maintain your balance by keeping your hands on your hips. Alternatively walk forward without jumping to decrease difficulty.</string>
+    <string name="k_letter">K</string>
+    <string name="k_title">Knee Tucks</string>
+    <string name="k_desc">Standing in one place, jump and tuck your knees into your chest whilst in mid air, quickly extend again to return to the start position.</string>
+    <string name="l_letter">L</string>
+    <string name="l_title">Lying Leg Raises</string>
+    <string name="l_desc">Lying on your back, keep straight legs, flex at the hip until a 90 degree bend has been made. Make sure you engage your core during the entire movement and maintain constant speed and control.</string>
+    <string name="m_letter">M</string>
+    <string name="m_title">Mountain Climbers</string>
+    <string name="m_desc">In a press-up position, bring one leg under your chest, jump and swap foot position. Do this while keeping hands on the floor. This is an explosive movement which should be done with a tight core.</string>
+    <string name="n_letter">N</string>
+    <string name="n_title">Narrow Press-Ups</string>
+    <string name="n_desc">Similar to a standard press-up, the difference between this exercise is that your hands are directly beneath your shoulders, and your arms are pinched into your sides. This isolates your tricep more.</string>
+    <string name="o_letter">O</string>
+    <string name="o_title">Oblique Ups</string>
+    <string name="o_desc">Lying on a 45 dgree angle, with one hand behind your head, bend at the mid section and try to make contact with your knee and elbow. This exercise, performed properly, will set your obliques on fire.</string>
+    <string name="p_letter">P</string>
+    <string name="p_title">Pull ups</string>
+    <string name="p_desc">Standard pull ups, wide grip, close grip or underneath grip, whatever suits you is fine. You may also use a coloured band. Remember to drop your shoulders, and exhale on the way up.</string>
+    <string name="q_letter">Q</string>
+    <string name="q_title">Quick Jumps</string>
+    <string name="q_desc">Jump on the spot, kicking your butt with your heels. This is a quick explosive movement that is harder than it looks.</string>
+    <string name="r_letter">R</string>
+    <string name="r_title">Russian twist</string>
+    <string name="r_desc">In a seated position leaning back with your feet off the ground, clasp your hands together and make contact on both sides is ONE rep</string>
+    <string name="s_letter">S</string>
+    <string name="s_title">Squats (Jumps)</string>
+    <string name="s_desc">Performing standard squats, but jumping on the upward phase, the concept behind this exercise is to spend less time on the ground and more time in the air. Also try to land softly lake a cat, on the balls of your feet. This works best if you use your arms in a counter movement</string>
+    <string name="t_letter">T</string>
+    <string name="t_title">T-Push ups</string>
+    <string name="t_desc">Perform a press-up, whist at the extended phase, turn torso out, and with one hand, reach for the calling. Lower hand back to original position</string>
+    <string name="u_letter">U</string>
+    <string name="u_title">Upright Row</string>
+    <string name="u_desc">Using a suitable barbell, grip the bar close, and raise the bar to your chin, keeping elbows nice and high. This is a shoulder exercise.</string>
+    <string name="v_letter">V</string>
+    <string name="v_title">V-ups</string>
+    <string name="v_desc">Lying on your back with extended arms and legs, come up in a V Type motion and make contact with hands to feet. This takes a bit of practice and balance.</string>
+    <string name="w_letter">W</string>
+    <string name="w_title">Wide grip push ups</string>
+    <string name="w_desc">Perform press-ups with a wide grip position where your arms are wider than your shoulder width. Lower yourself to 90 degree elbow bend. This exercise can be made easier by keeping your knees on the ground. Engage your core to prevent sagging of the lower backs.</string>
+    <string name="x_letter">X</string>
+    <string name="x_title">X-Jumps</string>
+    <string name="x_desc">Crouch down, then jump as high as you can, performing an X while in mid air. Try to land as softly as possible.</string>
+    <string name="y_letter">Y</string>
+    <string name="y_title">Y-Press</string>
+    <string name="y_desc">Choosing an appropriate weight dumbbell, start with your arms in a shoulder press position. Then extend your arms in the shape of a Y</string>
+    <string name="z_letter">Z</string>
+    <string name="z_title">Zottman Curl</string>
+    <string name="z_desc">Performing a bicep curl, but at the fully flexed position, turn your wrists over 180 degrees and lower. Then rotate the wrist at the extended position back to the standard curl position. This exercise also works your brachioradialis muscle in your forearm.</string>
+    <!-- End of the hard coded array -->
 
     <string name="results_message">This is the results screen, either get the time and save it with the button or alternatively have the time displayed and press the button to stop it and save it to shared prefs, it\'s all up to you guys.</string>
 
-    <!--Information section-->
+    <!-- Information section -->
     <string name="info_title">Information about this app</string>
     <string name="info_desc">Welcome to the ABC challenge This is a full body workout designed to improve your strength, muscular endurance and anaerobic capacity. It is composed of an array of movements of different difficulties that will push your current level of fitness through the stratosphere.
         \n \n
@@ -46,14 +110,19 @@
         Special thanks to all our awesome models for their great demonstrations!
         \n \n
         If you have any questions about the challenge don\'t hesitate to ask our friendly Club Aqua staff as they will be more than happy to assist you.
-        \n \n
-        <b>Good Luck!</b>
-    </string>
+        \n \n <b>Good Luck!</b></string>
 
-    <!--Lables for each activity-->
+    <!-- Lables for each activity -->
     <string name="routine_label">A-Z Fitness</string>
     <string name="main_label">Home</string>
     <string name="info_label">Information</string>
+    <string name="title_activity_history">History</string>
     <string name="results_button">Show me the results!</string>
     <string name="abc_logo_description">ABC Challenge Logo</string>
+    <string name="start_button">Start</string>
+    <string name="stop_button">Stop</string>
+
+    <!-- Health Warning -->
+    <string name="health_warning">If you have an existing health condition, please consult your doctor before attempting this fitness routine.</string>
+
 </resources>

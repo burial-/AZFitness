@@ -21,16 +21,47 @@
         android:gravity="center_horizontal"
         android:textSize="16sp" />
 
-    <com.daimajia.slider.library.SliderLayout
-        android:id="@+id/fragment_routine_slider"
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="300dp"
-        android:scaleType="centerCrop" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/fragent_routine_description"
-        android:text="@string/a_desc"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/fragment_routine_slider"
+                android:layout_width="fill_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop" />
+
+
+            <TextView
+                android:id="@+id/fragent_routine_description"
+                android:text="@string/a_desc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:text="@string/start_button"
+                    android:id="@+id/frag_routine_start_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="@string/stop_button"
+                    android:id="@+id/frag_routine_end_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

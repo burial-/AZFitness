@@ -62,6 +62,14 @@ class HardcodedRoutines {
                 routineImages);
         routines.add(routine);
 
+        routineImages = new int[]{R.drawable.a5};
+        routine = new Routine(
+                mContext.getString(R.string.f_title),
+                mContext.getString(R.string.f_desc),
+                mContext.getString(R.string.f_letter),
+                routineImages);
+        routines.add(routine);
+
         // We sort the list by the letter
         if (routines.size() > 0) {
             Collections.sort(routines, new Comparator() {

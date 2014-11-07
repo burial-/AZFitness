@@ -7,20 +7,33 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import com.orm.SugarContext;
+
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
+
+import in.hiphopheads.azfitness.Models.RoutineResultList;
+import in.hiphopheads.azfitness.Models.RoutineTime;
+import in.hiphopheads.azfitness.Models.UserRecord;
 
 
 public class RoutineEndFragment extends Fragment {
 
-    // Start time we get from shared prefs
-    private Date mStartTime;
+    // RoutineId we get from shared prefs
+    private String RoutineId;
+
+    // The User Record for this instance
+    private UserRecord mUserRecord;
 
     // Views we need to change/use
     private TextView mResultText;
+    private ListView mRoutineResults;
 
     /**
      * Use this factory method to create a new instance of
@@ -40,8 +53,13 @@ public class RoutineEndFragment extends Fragment {
         super.onCreate(savedInstanceState);
         Context context = getActivity();
         SharedPreferences sharedPref = context.getSharedPreferences(
-                in.hiphopheads.azfitness.MainFragment.PREF_PARAM_TIME_KEY, Context.MODE_PRIVATE);
-        mStartTime = new Date(sharedPref.getLong(in.hiphopheads.azfitness.MainFragment.PREF_PARAM_TIME, 0));
+                MainFragment.PREF_PARAM_KEY, Context.MODE_PRIVATE);
+        //mStartTime = new Date(sharedPref.getLong(in.hiphopheads.azfitness.MainFragment.PREF_PARAM_TIME, 0));
+        String arg = String.valueOf(sharedPref.getLong(MainFragment.PREF_PARAM_LAST_ROUTINE, 0));
+        RoutineId = arg;
+        mUserRecord = UserRecord.find(UserRecord.class, "ROUTINE_TIME_ID = " + arg).get(0);
+
+        SugarContext.init(getActivity());
     }
 
     @Override
@@ -52,23 +70,46 @@ public class RoutineEndFragment extends Fragment {
         View rootView =  inflater.inflate(R.layout.fragment_routine_end, container, false);
         mResultText = (TextView) rootView.findViewById(R.id.frag_routine_end_result);
 
+        mRoutineResults = (ListView) rootView.findViewById(R.id.frag_routine_end_listview);
+
         Button mShowResults = (Button) rootView.findViewById(R.id.frag_routine_end_show_results);
         mShowResults.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                displayResults(new Date().getTime());
+                mUserRecord.timeCompleted = new Date();
+                mUserRecord.save();
+                displayResults();
             }
         });
 
         return  rootView;
     }
 
-    void displayResults(long EndTime)
+    void displayResults()
     {
-        long difference = EndTime - mStartTime.getTime();
-        long diffInSec = TimeUnit.MILLISECONDS.toSeconds(difference);
+        long difference = mUserRecord.timeCompleted.getTime() - mUserRecord.timeStarted.getTime();
+        long diffInSec = TimeUnit.MILLISECONDS.toSeconds(difference)%60;
         long diffInMin = TimeUnit.MILLISECONDS.toMinutes(difference);
         long diffInHour = TimeUnit.MILLISECONDS.toHours(difference);
         mResultText.setText(diffInHour + " Hours, " + diffInMin +" Minutes, " + diffInSec + " Seconds");
+
+        ArrayList<RoutineResultList> mListRoutines = new ArrayList<RoutineResultList>();
+        for (RoutineTime routineTime : RoutineTime.find(RoutineTime.class, "ROUTINE_TIME_ID = " + RoutineId))
+        {
+            long diff = routineTime.timeCompleted - routineTime.timeStarted;
+            long Sec = TimeUnit.MILLISECONDS.toSeconds(diff)%60;
+            long Min = TimeUnit.MILLISECONDS.toMinutes(diff);
+            mListRoutines.add(new RoutineResultList(
+                    routineTime.RoutineLetter,
+                    routineTime.RoutineTitle,
+                    Min,
+                    Sec,
+                    routineTime.RoutineTimeId
+            ));
+        }
+
+        ArrayAdapter arrayAdapter = new ResultsListAdapter(getActivity(), mListRoutines);
+        mRoutineResults.setAdapter(arrayAdapter);
     }
 }
+
