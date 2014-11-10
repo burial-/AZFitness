@@ -88,6 +88,14 @@ public class RoutineEndFragment extends Fragment {
         mUserRecord.timeCompleted = new Date();
         mUserRecord.save();
 
+        Context context = getActivity();
+        SharedPreferences sharedPref = context.getSharedPreferences(
+                MainFragment.PREF_PARAM_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putBoolean(MainFragment.PREF_PARAM_COMPLETED_ROUTINE, true);
+        editor.apply();
+
+
         long difference = mUserRecord.timeCompleted.getTime() - mUserRecord.timeStarted.getTime();
         long diffInSec = TimeUnit.MILLISECONDS.toSeconds(difference)%60;
         long diffInMin = TimeUnit.MILLISECONDS.toMinutes(difference);

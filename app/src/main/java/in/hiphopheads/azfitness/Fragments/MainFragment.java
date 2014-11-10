@@ -29,6 +29,7 @@ public class MainFragment extends Fragment {
     public static final String PREF_PARAM_KEY = "pref_rep_key";
     public static final String PREF_PARAM_REPS = "reps";
     public static final String PREF_PARAM_LAST_ROUTINE = "last_routine";
+    public static final String PREF_PARAM_COMPLETED_ROUTINE = "complete_routine";
     private static final int REP_AMOUNT = 10;
 
     public MainFragment() {
@@ -77,21 +78,26 @@ public class MainFragment extends Fragment {
         SharedPreferences sharedPref = context.getSharedPreferences(
                 PREF_PARAM_KEY, Context.MODE_PRIVATE);
         String arg = String.valueOf(sharedPref.getLong(MainFragment.PREF_PARAM_LAST_ROUTINE, 0));
+        SharedPreferences.Editor editor = sharedPref.edit();
 
         // Check if there is a previous routine that the user didn't stop
-        try {
-            UserRecord userRecord = UserRecord.find(UserRecord.class, "ROUTINE_TIME_ID = " + arg).get(0);
-            userRecord.timeCompleted = new Date();
-            userRecord.save();
-        } catch (Exception e) {
+        boolean complete = sharedPref.getBoolean(PREF_PARAM_COMPLETED_ROUTINE, true);
+        if(! complete) {
+            try {
+                UserRecord userRecord = UserRecord.find(UserRecord.class, "ROUTINE_TIME_ID = " + arg).get(0);
+                userRecord.timeCompleted = new Date();
+                userRecord.save();
+                editor.putBoolean(PREF_PARAM_COMPLETED_ROUTINE, true);
+            } catch (Exception e) {
 
+            }
         }
-        SharedPreferences.Editor editor = sharedPref.edit();
         editor.putInt(PREF_PARAM_REPS, REP_AMOUNT);
         editor.putLong(PREF_PARAM_LAST_ROUTINE, routineTimeId);
         editor.apply();
 
         UserRecord newUserRecord = new UserRecord(routineTimeId, new Date(), new Date(), sharedPref.getInt(PREF_PARAM_REPS, REP_AMOUNT));
         newUserRecord.save();
+        editor.putBoolean(PREF_PARAM_COMPLETED_ROUTINE, false);
     }
 }

@@ -25,7 +25,6 @@
     <string name="e_letter">E</string>
     <string name="e_title">Eccentric Squats</string>
     <string name="e_desc">Standing in a squat position, lower yourself towards the ground slowly, taking 4–6 seconds to get to 90 degree knee bend, then rise normally.</string>
-    <!-- Routines to add -->
     <string name="f_letter">F</string>
     <string name="f_title">Frog Jumps (lateral)</string>
     <string name="f_desc">Standing with feet wider than shoulder width, toes pointing on a 45 degree angle, squat down until you have a 90 degree bend in your knees. Jump laterally and squat again.</string>
@@ -91,7 +90,7 @@
     <string name="z_desc">Performing a bicep curl, but at the fully flexed position, turn your wrists over 180 degrees and lower. Then rotate the wrist at the extended position back to the standard curl position. This exercise also works your brachioradialis muscle in your forearm.</string>
     <!-- End of the hard coded array -->
 
-    <string name="results_message">This is the results screen, either get the time and save it with the button or alternatively have the time displayed and press the button to stop it and save it to shared prefs, it\'s all up to you guys.</string>
+    <string name="results_message">This is your results screen, press the button to see your results and stop your routine total time. You can press it again to refresh the results and update your total time</string>
 
     <!-- Information section -->
     <string name="info_title">Information about this app</string>
@@ -116,21 +115,25 @@
     <string name="routine_label">A-Z Fitness</string>
     <string name="main_label">Home</string>
     <string name="info_label">Information</string>
+    <string name="title_activity_previous_routine">Routine Times</string>
     <string name="title_activity_history">History</string>
     <string name="results_button">Show me the results!</string>
     <string name="abc_logo_description">ABC Challenge Logo</string>
+
+    <!--Button labels-->
     <string name="start_button">Start</string>
     <string name="stop_button">Stop</string>
 
     <!-- Health Warning -->
     <string name="health_warning">If you have an existing health condition, please consult your doctor before attempting this fitness routine.</string>
-    <string name="title_activity_previous_routine">Routine Times</string>
-    <string name="formating_string1"> - </string>
-    <string name="formating_string2"> Mins, </string>
+
+    <!--Formatting strings-->
+    <string name="formating_string1">\u0020 - \u0020</string>
+    <string name="formating_string2">Mins, \u0020</string>
     <string name="formating_string3"> Secs</string>
-    <string name="formating_string5"> - Time : </string>
-    <string name="formating_string6">hrs, </string>
-    <string name="formating_string7">mins, </string>
+    <string name="formating_string5">\u0020 - \u0020 Time \u0020 : \u0020</string>
+    <string name="formating_string6">hrs, \u0020</string>
+    <string name="formating_string7">mins, \u0020</string>
     <string name="formating_string8">secs</string>
 
 </resources>
